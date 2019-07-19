@@ -14,3 +14,14 @@ bool option(int a,int b)
 
 #define max(a,b) (a>b?a:b)
 #define min(a,b) (a<b?a:b)
+
+//mod
+(a*b)%c=((a%c)*(b%c))%c
+
+if(b chan)
+(a^b)%c=((a^b/2)*(a^b/2))%c
+if(b le)
+(a^b)%=(a*(a^(b-1))%c
+
+neu muon tra ve gia tri mod cua so am.
+vi du: x%y=(x+y)%y(x la so am)
