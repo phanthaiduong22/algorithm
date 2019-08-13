@@ -25,3 +25,6 @@ if(b le)
 
 neu muon tra ve gia tri mod cua so am.
 vi du: x%y=(x+y)%y(x la so am)
+
+//bit
+(a+b)=(a^b)+(a&b)
