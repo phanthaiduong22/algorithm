@@ -1,0 +1,16 @@
+void convert(BigInt &c, string s) {
+    // Mục tiêu của hàm: chuyển "123456789" -> [5, 89, 67, 45, 23, 1] với BASE = 100
+    c.Digit.resize(s.length() / MAX_DIGIT + (s.length() % MAX_DIGIT != 0));
+
+    int base = 1;     // Lưu xem hàng chúng ta đang xây dựng là bao nhiêu
+    int j = s.length() - 1; // Biến chạy các chữ số trong chuỗi
+
+    for (int i = 0; i < c.Digit.size(); i++) {
+        while (base != BASE && j >= 0) {
+            c.Digit[i] = c.Digit[i] + base * (s[j] - '0');
+            j--;
+            base *= 10;
+        }
+        base = 1;
+    }
+}

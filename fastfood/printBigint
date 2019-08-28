@@ -1,0 +1,16 @@
+void print(BigInt c) {
+    cout << c.Digit.back();
+    for (int i = c.Digit.size() - 2; i >= 0; i--) {
+        int tmp = c.Digit[i];
+        int count_digit = 0;
+        // Đếm số lượng chữ số hiện có của Digit[i]
+        do {
+            tmp /= 10;
+            count_digit++;
+        } while (tmp);
+        // In các số 0 còn thiếu ở đầu
+        for (int j = MAX_DIGIT - count_digit; j >= 1; j--)
+            cout << "0";
+        cout << c.Digit[i];
+    }
+}
