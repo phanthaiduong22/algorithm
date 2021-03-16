@@ -60,6 +60,32 @@ int bsFirst(vector<int> & a, int left, int right, int x)//timphantucuoicung
 	}
 	return -1;
 }
+int lowerBound(vector<int>a, int x){
+    int l = 0, r = a.size(), pos = r;
+    while(l<r){
+        int m = (r - l) / 2 + l;
+        if(a[m] >= x ){
+            pos = m;
+            r = m;
+        }else
+            l = m + 1;
+    }
+    return pos;
+}
+
+int upperBound(vector<int>a, int x){
+    int l = 0, r = a.size(), pos = r;
+    while(l<r){
+        int m = (r - l) / 2 + l;
+        if(a[m] > x ){
+            pos = m;
+            r = m;
+        }else
+            l = m + 1;
+    }
+    return pos;
+}
+
 int main()
 {
 	vector<int>a;
