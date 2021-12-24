@@ -38,3 +38,8 @@ int my_gcd(int a, int b)
 int mod(int x, int m) {
     return (x%m + m)%m;
 }
+
+0deg rotation : i, j will point to i, j
+90deg rotation : i, j will point to j, n - i - 1
+180deg rotation : i, j will point to n - i - 1, n - j - 1
+270deg rotation : i, j will point to n - j - 1, i
