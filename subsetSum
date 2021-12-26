@@ -1,0 +1,16 @@
+// https://www.techiedelight.com/subset-sum-problem/
+// https://leetcode.com/problems/partition-equal-subset-sum/
+class Solution {
+public:
+	bool subsetSum(vector<int>& nums, int sum) {
+		vector<int> total(sum + 1);
+		total[0] = 1;
+		for (int j = 0; j < nums.size(); j++) {
+			for (int i = sum; i >= 1; i--) {
+				if (i - nums[j] >= 0 && total[i - nums[j]] == 1)
+					total[i] = 1;
+			}
+		}
+		return total[sum];
+	}
+};
