@@ -27,6 +27,15 @@ void reverselist(Node** head)
     *head = prev;
 }
 
+// Kmp preprocess
+int i = 1, j = 0, n = str.size();
+vector<int> dp(n+1,0);
+while( i < str.size() ){
+    if( str[i] == str[j] ) dp[++i]=++j;
+    else if( j == 0 ) i++;
+    else j = dp[j];
+}
+
 //reference: tham chieu
 
 #define max(a,b) (a>b?a:b)
