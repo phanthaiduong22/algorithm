@@ -56,11 +56,17 @@ vi du: x%y=(x+y)%y(x la so am)
 (a+b)=(a^b)+(a&b)
 
 //gcd
-int my_gcd(int a, int b)
+int gcd(int a, int b)
 {
 	if (b == 0) return a;
-	else return my_gcd(b, a % b);
+	else return gcd(b, a % b);
 }
+
+// lcm
+int lcm(int a, int b){
+	return (a / gcd(a, b)) * b;
+}
+
 int mod(int x, int m) {
     return (x%m + m)%m;
 }
